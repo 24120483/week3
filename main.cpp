@@ -163,7 +163,7 @@ int main(int argc,char*argv[]) {
 		else if (strcmp(argv[i], "-i") == 0) {
 			input = argv[i + 1];
 		}
-		else {
+		else if (strcmp(argv[i], "-o") == 0) {
 			output = argv[i + 1];
 		}
 	}
@@ -179,25 +179,25 @@ int main(int argc,char*argv[]) {
 		file1 >> arr[i];
 	}
 	file1.close();
-	if (algorithm == "selection_sort") {
+	if (algorithm == "selection-sort") {
 		selection_sort(arr, n);
 	}
-	else if (algorithm == "insertion_sort") {
+	else if (algorithm == "insertion-sort") {
 		insertion_sort(arr, n);
 	}
-	else if (algorithm == "bubble_sort") {
+	else if (algorithm == "bubble-sort") {
 		bubble_sort(arr, n);
 	}
-	else if (algorithm == "heap_sort") {
+	else if (algorithm == "heap-sort") {
 		heap_sort(arr, n);
 	}
-	else if (algorithm == "merge_sort") {
+	else if (algorithm == "merge-sort") {
 		merge_sort(arr, 0, n - 1);
 	}
-	else if (algorithm == "quick_sort") {
+	else if (algorithm == "quick-sort") {
 		quick_sort(arr, 0, n - 1);
 	}
-	else {
+	else if (algorithm == "radix-sort") {
 		radix_sort(arr, n);
 	}
 	ofstream file2(output);
